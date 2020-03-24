@@ -66,7 +66,7 @@ body:before {
 .navbar:before {
 	position: absolute;
 	content: '';
-	background: url(../images/mission/headleft.png);
+	background: url(../images/headleft.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 0;
@@ -83,7 +83,7 @@ body:before {
 	content: '';
 	right: 0;
 	top: 0;
-	background: url(../images/mission/headright.png);
+	background: url(../images/headright.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 0;
@@ -326,7 +326,7 @@ ul#countdown li {
 	display: block;
 	width: 93px;
 	height: 120px;
-	background: url(../images/mission/trophy.png);
+	background: url(../images/trophy.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
@@ -348,7 +348,7 @@ ul#countdown li {
 	display: block;
 	width: 93px;
 	height: 120px;
-	background: url(../images/mission/trophy.png);
+	background: url(../images/trophy.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
