@@ -1,0 +1,21 @@
+{
+  "short_name": "3ʳᵈ",
+  "name": "3ʳᵈ TESTAMENT",
+  "icons": [
+    {
+      "src": "3rd-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "3rd-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/3rd/index.html",
+  "background_color": "#000084",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000084"
+}
