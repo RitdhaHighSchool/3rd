@@ -622,19 +622,19 @@ ul#countdown li {
 }
 @media only screen and (min-device-width: 1024px) and (min-device-height: 768px) and (orientation:landscape) {
 	.inner {
-		padding-top: calc(7.5vh + 85px);
+		padding-top: calc(7.5vh + 85px) !important;
 		}
   #missiontitle {
-		font-size: 8.5em;
+		font-size: 8.5em !important;
 	}
 	#missiondetail {
-		height: 1.5em;
+		height: 1.5em !important;
 	}
 	#reward {
-		width: 37.5em;
+		width: 37.5em !important;
 	}
 	#reward h2 {
-		font-size: 6.5em;
+		font-size: 6.5em !important;
 	}
 }
 
