@@ -361,7 +361,7 @@ ul#countdown li {
     transform: scale(0.85);
 	margin-top: -0.15em;
 	animation: scale2 0.5s linear infinite;
-	vertical-align: text-bottom;
+	vertical-align: middle;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
 	-khtml-user-select: none; 
