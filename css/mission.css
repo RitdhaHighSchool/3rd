@@ -171,19 +171,19 @@ body:before {
 }
 
 #countdowntitle {
-	 text-align: center;
-    font-size: 17.5em;
-    vertical-align: middle;
-    line-height: 0.9em;
+	text-align: center;
+	width:80vw;
+  font-size: 14.5vw;
+  vertical-align: middle;
+  line-height: 0.9em;
 	padding-left: 0.1em;
 	padding-top: 0.1em;
-    height: auto;
-    position: relative;
+	height: auto;
+  position: relative;
 	z-index: 99999;
 	background: #fff;
 	color: #000;
 	mix-blend-mode: screen;
-	width: 5.5em;
 	margin: 0.2em auto;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
@@ -191,21 +191,28 @@ body:before {
 	-moz-user-select: none; 
 	-ms-user-select: none;
 	user-select: none; 
-	pointer-events: none !important;
+	pointer-events: none !important;	
 }
 
 #countdowntime {
-	 text-align: center;
-    font-size: 19.5em;
-    vertical-align: middle;
-    line-height: 1em;
+	text-align: center;
+	width: 75vw;
+  font-size: 16vw;
+  vertical-align: middle;
+  line-height: 1em;
 	padding: 0.1em 0 0 0.1em;
-    height: auto;
-    position: relative;
+  height: auto;
+  position: relative;
 	z-index: 99999;
-	border: 6px solid #fff;
-	width: 4.75em;
+	border: 1vw solid #fff;
 	margin: 0 auto 0.1em;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none; 
+	pointer-events: none !important;	
 }
 
 ul#countdown {
@@ -323,17 +330,17 @@ ul#countdown li {
 
 #reward h2:before {
 	content: '';
-	display: block;
 	width: 93px;
 	height: 120px;
 	background: url(../images/trophy.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
-    transform: scale(0.85);
+  transform: scale(0.85);
 	margin-top: -0.15em;
 	margin-right: 0.12em;
 	animation: scale2 0.5s linear infinite;
+	vertical-align: text-bottom;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
 	-khtml-user-select: none; 
@@ -345,7 +352,6 @@ ul#countdown li {
 
 #reward h2:after {
 	content: '';
-	display: block;
 	width: 93px;
 	height: 120px;
 	background: url(../images/trophy.png);
@@ -355,6 +361,7 @@ ul#countdown li {
     transform: scale(0.85);
 	margin-top: -0.15em;
 	animation: scale2 0.5s linear infinite;
+	vertical-align: text-bottom;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
 	-khtml-user-select: none; 
@@ -611,6 +618,20 @@ ul#countdown li {
 		width: 100%;
 		margin: 0.2em auto 0.1em;
 		font-size: 2.25em;
+	}
+}
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+  #missiontitle {
+		font-size: 8em;
+	}
+	#missiondetail {
+		height: 1.5em;
+	}
+	#reward {
+		width: 37.5em;
+	}
+	#reward h2 {
+		font-size: 6.5em;
 	}
 }
 
