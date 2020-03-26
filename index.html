@@ -87,7 +87,7 @@
 						<div class="float-right">
 							<div id="acceptbutton">
 								<div id="accept">
-									ACCEPT MISSION
+									ACCEPT วันที่
 								</div>
 							</div>
 						</div>
@@ -110,11 +110,7 @@
 					$(this).removeClass('click')
 				});
 				html2canvas(document.getElementById('capture')).then(canvas => {
-					var a = document.createElement('a');
-					var date = new Date().toJSON().slice(0, 10).replace(/-/g, '');
-					a.href = canvas.toDataURL("image/png");
-					a.download = 'mission' + date + '.png';
-					a.click();
+					document.body.appendChild(canvas);
 				});
 			});
 
