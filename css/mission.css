@@ -249,10 +249,10 @@ ul#countdown li {
   margin: 0 auto;
   font-size: calc(3vw + 3vh);
 	text-align: left !important;
-	/*display:flex !important;
+	display:flex !important;
   justify-content:center !important;
   align-items:center !important;
-	flex-flow:column wrap !important;*/
+	flex-flow:column wrap !important;
 	width: 80%;
 	animation: scale 1s linear infinite;
 	transform: scale(0.95);
@@ -347,10 +347,10 @@ ul#countdown li {
   font-size: calc(2.6vw + 2.6vh);
 	display: block;
 	text-align: left !important;
-	/*display:flex !important;
+	display:flex !important;
   justify-content:center !important;
   align-items:center !important;
-  flex-flow:column wrap !important;*/
+  flex-flow:column wrap !important;
   width: 100%;
 	transform: scale(0.95);
 	background: transparent;
