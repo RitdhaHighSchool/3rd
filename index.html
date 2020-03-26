@@ -124,7 +124,7 @@
 				if ($('#reward p').is(':empty')) {
 					$('#reward p').text('พิมพ์ที่นี่...')
 				}
-				html2canvas(document.getElementById('capture')).then(canvas => {
+				html2canvas($('#capture'), {scale: 2}).then(canvas => {
 					var a = document.createElement('a');
 					var date = new Date().toJSON().slice(0, 10).replace(/-/g, '');
 					a.href = canvas.toDataURL("image/png");
