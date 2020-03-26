@@ -6,7 +6,7 @@
 }
 [contenteditable=true]:empty:before {
   content: attr(placeholder);
-  display: block; /* For Firefox */
+  display: block;
 }
 #more {
 	z-index: 999;
