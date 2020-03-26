@@ -247,8 +247,9 @@ ul#countdown li {
 #missiondetail {
 	font-family: 'RD CHULAJARUEK';
   margin: 0 auto;
-  font-size: calc(3vw + 3vh);
-	text-align: left !important;
+	font-size: calc(3vw + 3vh);
+	word-spacing: 5px;
+	text-align: center !important;
 	display:flex !important;
   justify-content:center !important;
   align-items:center !important;
@@ -436,7 +437,14 @@ ul#countdown li {
 
 #acceptbutton.click {
 	animation: scale3 0.25s linear;
+	border-color: #fff;
+	
 }
+#acceptbutton.click #accept {
+	background: #fff;
+	color: #000;	
+}
+
 
 #accept {
 	display: inline-block;
