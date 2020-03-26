@@ -117,16 +117,24 @@
 		$(document).ready(function () {
 
 			$('#acceptbutton').on('click', function () {
-				$(this).addClass('click');
-				$(this).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (event) {
-					$(this).removeClass('click')
-				});
+				if ($('#missiondetail').is(':empty')) {
+					$('#missiondetail').text('พิมพ์ที่นี่...')
+				}
+				if ($('#reward p').is(':empty')) {
+					$('#reward p').text('พิมพ์ที่นี่...')
+				}
 				html2canvas(document.getElementById('capture')).then(canvas => {
 					var a = document.createElement('a');
 					var date = new Date().toJSON().slice(0, 10).replace(/-/g, '');
 					a.href = canvas.toDataURL("image/png");
 					a.download = 'mission' + date + '.png';
 					a.click();
+					$('#missiondetail').text('')
+					$('#reward p').text('')
+				});
+				$(this).addClass('click');
+				$(this).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (event) {
+					$(this).removeClass('click')
 				});
 			});
 
