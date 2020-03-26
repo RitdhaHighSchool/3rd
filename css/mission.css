@@ -248,8 +248,11 @@ ul#countdown li {
 	font-family: 'RD CHULAJARUEK';
   margin: 0 auto;
   font-size: calc(3vw + 3vh);
-	display: block;
-	text-align: center;
+	text-align: left;
+	display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column wrap;
   width: 80%;
 	animation: scale 1s linear infinite;
 	transform: scale(0.95);
@@ -326,35 +329,6 @@ ul#countdown li {
 	width: 54em;
 }
 
-#acceptbutton {
-	padding: 7px;
-	border: solid #004bf4 5px;
-	display: inline-block;
-	cursor: pointer;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-   user-select: none;
-}
-
-#acceptbutton.click {
-	animation: scale3 0.25s linear;
-}
-
-#accept {
-	display: inline-block;
-	box-sizing: border-box;
-	background: #004bf4;
-	border: none;
-	font-size: 72px;
-	padding: .2em .4em .05em;
-	text-indent: 8px;
-	letter-spacing: -1px;
-}
-
-
 #reward h2 {
 	margin: 0.1em 0 -0.1em;
 	font-size: 8.5em;
@@ -372,7 +346,11 @@ ul#countdown li {
   margin: 0 auto 0.1em;
   font-size: calc(2.6vw + 2.6vh);
 	display: block;
-	text-align: center;
+	text-align: left;
+	display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column wrap;
   width: 100%;
 	transform: scale(0.95);
 	background: transparent;
@@ -442,6 +420,33 @@ ul#countdown li {
 	-ms-user-select: none;
 	user-select: none; 
 	pointer-events: none;
+}
+#acceptbutton {
+	padding: 7px;
+	border: solid #004bf4 5px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+   user-select: none;
+}
+
+#acceptbutton.click {
+	animation: scale3 0.25s linear;
+}
+
+#accept {
+	display: inline-block;
+	box-sizing: border-box;
+	background: #004bf4;
+	border: none;
+	font-size: 72px;
+	padding: .2em .4em .05em;
+	text-indent: 8px;
+	letter-spacing: -1px;
 }
 
 @media(max-width:1600px){
