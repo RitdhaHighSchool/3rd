@@ -39,22 +39,13 @@
 	<!-- font-awesome icons -->
 	<link href="css/fonts.css" rel="stylesheet">
 	<!-- //font-awesome icons -->
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"
+		integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA=" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-	<script type="text/javascript">
-		if (navigator.serviceWorker.controller) {
-			console.log('[PWA Builder] active service worker found, no need to register')
-		} else {
-
-			//Register the ServiceWorker
-			navigator.serviceWorker.register('service-worker.js', {
-				scope: './'
-			}).then(function (reg) {
-				console.log('Service worker has been registered for scope:' + reg.scope);
-			});
-		}
-	</script>
+<body id="capture">
+	
 	<div class="nav-links">
 		<nav class="navbar">
 			<div class="container">
@@ -64,8 +55,6 @@
 
 	</div>
 	<div class="navsep"></div>
-
-
 	<div class="outer">
 		<div class="middle">
 			<div class="inner">
@@ -76,7 +65,7 @@
 						</div>
 					</div>
 					<div class="clearfix"></div>
-					<div id="missiondetail" contenteditable="true" placeholder="พิมพ์ที่นี่..."></div>
+					<div id="missiondetail" contenteditable="true" value="พิมพ์ที่นี่..." placeholder="พิมพ์ที่นี่..."></div>
 					<script type="text/javascript">
 						window.onload = function () {
 							document.getElementById("missiondetail").focus();
@@ -88,9 +77,19 @@
 					<div class="clearfix"></div>
 
 					<div id="bottom">
-						<div id="reward">
-							<h2>REWARD</h2>
-							<p contenteditable="true" placeholder="พิมพ์ที่นี่..."></p>
+						<div class="float-left">
+							<div id="reward" class="float-left">
+								<h2>REWARD</h2>
+								<p contenteditable="true" placeholder="พิมพ์ที่นี่..."></p>
+							</div>
+						</div>
+						<div class="sep"></div>
+						<div class="float-right">
+							<div id="acceptbutton">
+								<div id="accept">
+									ACCEPT MISSION
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -99,6 +98,31 @@
 			</div>
 		</div>
 	</div>
+	</div>
+
+	<script src="js/html2canvas.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('#acceptbutton').on('click', function () {
+				$(this).addClass('click');
+				$(this).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (event) {
+					$(this).removeClass('click')
+				});
+				html2canvas(document.getElementById('capture')).then(canvas => {
+					var a = document.createElement('a');
+					var date = new Date().toJSON().slice(0, 10).replace(/-/g, '');
+					a.href = canvas.toDataURL("image/png");
+					a.download = 'mission' + date + '.png';
+					a.click();
+				});
+			});
+
+		});
+
+	</script>
+
+
 </body>
 
 </html>
