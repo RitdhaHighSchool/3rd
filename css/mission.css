@@ -293,7 +293,9 @@ ul#countdown li {
 	margin: 2em 0 0;
 	text-align: center;
 	position: relative;
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	vertical-align: middle;	
 	white-space: nowrap;
 	height: 100%;
