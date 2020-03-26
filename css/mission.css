@@ -248,7 +248,7 @@ ul#countdown li {
 	font-family: 'RD CHULAJARUEK';
   margin: 0 auto;
   font-size: calc(3vw + 3vh);
-	text-align: left !important;
+	text-align: justify !important;
 	display:flex !important;
   justify-content:center !important;
   align-items:center !important;
@@ -346,7 +346,7 @@ ul#countdown li {
   margin: 0 auto 0.1em;
   font-size: calc(2.6vw + 2.6vh);
 	display: block;
-	text-align: left !important;
+	text-align: justify !important;
 	display:flex !important;
   justify-content:center !important;
   align-items:center !important;
