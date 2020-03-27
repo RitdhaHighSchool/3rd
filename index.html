@@ -150,8 +150,18 @@
 			event = event.originalEvent || event;
 			if (event.scale !== 1) {
 				event.preventDefault();
+				document.body.style.transform = 'scale(1)';
 			}
 		}, {passive: false});
+		
+		var lastTouchEnd = 0;
+    document.documentElement.addEventListener('touchend', function (event) {
+      var now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, {passive: false});
 	</script>
 
 </body>
