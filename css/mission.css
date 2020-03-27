@@ -249,9 +249,13 @@ ul#countdown li {
   margin: 0 auto;
 	font-size: calc(3vw + 3vh);
 	word-spacing: 5px;
-	text-align: center !important;
-	display: block !important;
+	text-align: left;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-flow: row wrap;
 	width: 80%;
+	max-width: 80%;
 	animation: scale 1s linear infinite;
 	transform: scale(0.95);
 	background: transparent;
@@ -344,9 +348,13 @@ ul#countdown li {
   margin: 0 auto 0.1em;
   font-size: calc(2.6vw + 2.6vh);
 	display: block;
-	text-align: center !important;
-	display: inline-block !important;
-  width: 100%;
+	text-align: left;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
+	max-width: 100%;
 	transform: scale(0.95);
 	background: transparent;
 	border: 0;
@@ -773,6 +781,7 @@ ul#countdown li {
 	}
 	#reward p {
 		width: 85%;
+		max-width: 85%;
 		margin: 0	auto 0.1em;
 		height: 3.2em;
 	}
@@ -830,7 +839,8 @@ ul#countdown li {
 		width: 75%;
 	}
 	#reward p {
-		width: 80%;
+		width: 85%;
+		max-width: 85%;
 	}
 	#missiontitle {
 	font-size: 4.75em;
@@ -972,6 +982,7 @@ ul#countdown li {
 	#missiondetail {
     font-size: 2em;
 		width: 80%;
+		max-width: 80%;
 		height: 3em;
 	}
 	#reward {
