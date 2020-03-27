@@ -383,7 +383,7 @@ ul#countdown li {
 	background-size: contain;
 	display: inline-block;
 	margin-top: -0.15em;
-	margin-right: 0.12em;
+	padding-left: 0.9em;
 	animation: scale2 0.5s linear infinite;
 	transform: scale(0.75);
 	vertical-align: middle;
