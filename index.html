@@ -39,10 +39,8 @@
 	<!-- font-awesome icons -->
 	<link href="css/fonts.css" rel="stylesheet">
 	<!-- //font-awesome icons -->
-	<script
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -124,12 +122,12 @@
 				if ($('#reward p').is(':empty')) {
 					$('#reward p').text('พิมพ์ที่นี่...')
 				}
-				html2canvas($('#capture'), {scale: 2}).then(canvas => {
+				html2canvas($('#capture'), { scale: 2 }).then(canvas => {
 					var a = document.createElement('a');
 					var d = new Date()
 					var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
 					var offset = d.getTimezoneOffset() / -60;
-					var nd = new Date(utc + (3600000*offset));
+					var nd = new Date(utc + (3600000 * offset));
 					var date = nd.toJSON().slice(0, 10).replace(/-/g, '');
 					a.href = canvas.toDataURL("image/png");
 					a.download = 'mission' + date + '.png';
@@ -146,7 +144,14 @@
 		});
 
 	</script>
-
+	<script>
+		document.addEventListener('touchmove', function (event) {
+			event = event.originalEvent || event;
+			if (event.scale !== 1) {
+				event.preventDefault();
+			}
+		}, {passive: false});
+	</script>
 
 </body>
 
