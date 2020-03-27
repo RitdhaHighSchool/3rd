@@ -444,7 +444,7 @@ ul#countdown li {
 }
 #acceptbutton.click #accept {
 	background: #fff;
-	color: #000;	
+	color: transparent;	
 }
 
 
