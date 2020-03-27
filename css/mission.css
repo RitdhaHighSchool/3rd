@@ -4,7 +4,7 @@
 ::-moz-selection {
   background: #000084;
 }
-[contenteditable=true]:empty:before {
+[contenteditable=true]:empty::before {
   content: attr(placeholder);
   display: block;
 }
@@ -31,7 +31,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   height: 0;
 }
 
-body:before {
+body::before {
 	content: '3';
 	font-size:150vw;
 	text-align: center;
@@ -73,11 +73,11 @@ body:before {
 	border-bottom: 10px solid #fff;
 }
 
-.nav-links.count .navbar:before, .nav-links.count .navbar:after {
+.nav-links.count .navbar::before, .nav-links.count .navbar::after {
 	display: none;
 }
 
-.navbar:before {
+.navbar::before {
 	position: absolute;
 	content: '';
 	background: url(../images/headleft.png);
@@ -92,7 +92,7 @@ body:before {
 	top: 0;
 }
 
-.navbar:after {
+.navbar::after {
 	position: absolute;
 	content: '';
 	right: 0;
@@ -384,7 +384,7 @@ ul#countdown li {
 	cursor: text;
 }
 
-#reward h2:before {
+#reward h2::before {
 	content: '';
 	width: 93px;
 	height: 120px;
@@ -405,7 +405,7 @@ ul#countdown li {
 	pointer-events: none;
 }
 
-#reward h2:after {
+#reward h2::after {
 	content: '';
 	width: 93px;
 	height: 120px;
@@ -460,7 +460,7 @@ ul#countdown li {
 	letter-spacing: -1px;
 }
 
-#accept:before {
+#accept::before {
 	content: "ACCEPT MISSION"
 }
 
@@ -608,8 +608,8 @@ ul#countdown li {
 		font-size: 2.2em;
 		height: 1.75em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 85px;
 		height: 100px;
 	}
@@ -626,13 +626,13 @@ ul#countdown li {
 	.navbar h1 {
 		 font-size: 5.25em;
 	 }
-	 .navbar:before {
+	 .navbar::before {
 		width: 311px;
 		height: 64px;
 		left: 0;
 		top: 0;
 	}
-	.navbar:after {
+	.navbar::after {
 		width: 311px;
 		height: 64px;
 		top: 64px;
@@ -701,8 +701,8 @@ ul#countdown li {
 	#reward h2 {
 		font-size: 5em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 76px;
 		height: 90px;
 	}
@@ -745,8 +745,8 @@ ul#countdown li {
 	#reward p {
 		font-size: 2.5em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 76px;
 		height: 90px;
 	}
@@ -760,7 +760,7 @@ ul#countdown li {
 	.navbar h1 {
 		 font-size: 3.25em;
 	 }
-	.navbar:after {
+	.navbar::after {
 		top: 0;
 	}
 	.navbar h1 {
@@ -790,8 +790,8 @@ ul#countdown li {
 		margin: 0	auto 0.1em;
 		height: 3.2em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 55px;
 		height: 65px;
 	}
@@ -897,8 +897,8 @@ ul#countdown li {
 	font-size: 4.5em;
 	border: 4px solid #fff;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 42px;
 		height: 50px;
 	}
@@ -934,8 +934,8 @@ ul#countdown li {
 	#reward h2 {
 		font-size: 3.6em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 42px;
 		height: 50px;
 	}
@@ -996,8 +996,8 @@ ul#countdown li {
 	#reward h2 {
 		font-size: 3.25em;
 	}
-	#reward h2:before,
-	#reward h2:after {
+	#reward h2::before,
+	#reward h2::after {
 		width: 42px;
 		height: 50px;
 	}
