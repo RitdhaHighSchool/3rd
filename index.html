@@ -127,7 +127,11 @@
 				}
 				html2canvas($('#capture'), {scale: 2}).then(canvas => {
 					var a = document.createElement('a');
-					var date = new Date().toJSON().slice(0, 10).replace(/-/g, '');
+					var d = new Date()
+					var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+					var offset = d.getTimezoneOffset() / -60;
+					var nd = new Date(utc + (3600000*offset));
+					var date = nd.toJSON().slice(0, 10).replace(/-/g, '');
 					a.href = canvas.toDataURL("image/png");
 					a.download = 'mission' + date + '.png';
 					a.click();
