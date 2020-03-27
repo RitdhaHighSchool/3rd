@@ -460,6 +460,10 @@ ul#countdown li {
 	letter-spacing: -1px;
 }
 
+#accept:before {
+	content: "ACCEPT MISSION"
+}
+
 @media(max-width:1600px){
 	#reward {
 		width: 45em;
