@@ -290,6 +290,26 @@ ul#countdown li {
 	position: relative;
 	overflow: hidden;
 }
+.alert {
+	position: fixed;
+	z-index: 9999;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	background: #000;
+	border: none;
+	display: none;
+}
+.alert span {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	z-index: 99999;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 5em;
+}
 
 #missiondetail {
 	font-family: 'RD CHULAJARUEK';
