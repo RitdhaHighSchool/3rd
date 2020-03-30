@@ -394,7 +394,6 @@ ul#countdown li {
 	display: inline-block;
 	margin-top: -0.15em;	
 	animation: scale2 0.5s linear infinite;
-	transform: scale(0.75);
 	vertical-align: middle;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
@@ -415,7 +414,6 @@ ul#countdown li {
 	display: inline-block;
 	margin-top: -0.15em;
 	animation: scale2 0.5s linear infinite;
-	transform: scale(0.75);
 	vertical-align: middle;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
