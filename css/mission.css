@@ -1056,7 +1056,7 @@ ul#countdown li {
 		transform: scale(1);
 		}
     50% {
-		transform: scale(0.75);
+		transform: scale(0.8);
 		}
 	100% {
 		transform: scale(1);
