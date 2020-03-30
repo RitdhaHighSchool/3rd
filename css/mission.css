@@ -466,6 +466,11 @@ ul#countdown li {
 	#reward {
 		width: 45em;
 	}
+	#reward h2::before,
+	#reward h2::after {
+		width: 72px;
+		height: 85px;
+	}
 	#accept {
 		font-size: 64px;
 	}
@@ -608,8 +613,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 72px;
-		height: 93px;
+		width: 70px;
+		height: 82px;
 	}
 	#missiondetail {
     font-size: 2.5em;
@@ -701,8 +706,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 60px;
-		height: 78px;
+		width: 52px;
+		height: 62px;
 	}
 	.float-left {
 		width:60%;
@@ -745,8 +750,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 60px;
-		height: 78px;
+		width: 54px;
+		height: 64px;
 	}
 }
 @media(max-width:667px){
@@ -790,8 +795,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 50px;
-		height: 65px;
+		width: 46px;
+		height: 54.5px;
 	}
 	#missiondetail {
 		height: 3.2em;
@@ -934,8 +939,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 42px;
-		height: 50px;
+		width: 40px;
+		height: 48px;
 	}
 	.sep {
 		margin: 1.5em auto 0;
@@ -996,8 +1001,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 42px;
-		height: 50px;
+		width: 32px;
+		height: 38px;
 	}
 	#reward p {
 		width: 100%;
@@ -1056,7 +1061,7 @@ ul#countdown li {
 		transform: scale(1);
 		}
     50% {
-		transform: scale(0.8);
+		transform: scale(1.15);
 		}
 	100% {
 		transform: scale(1);
