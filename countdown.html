@@ -74,12 +74,14 @@
 
 	<div class="outer">
 		<div class="numcontainer">
-			<div class="num">10010101101010101001010110101010100101011010101010010101101010101001010110101010100101011010101010010101101010101001010110101010101101010101001010110101010101101010101001010110101010</div>
+			<div class="num">
+				10010101101010101001010110101010100101011010101010010101101010101001010110101010100101011010101010010101101010101001010110101010101101010101001010110101010101101010101001010110101010
+			</div>
 		</div>
-		<div class="middle">		
+		<div class="middle">
 			<div class="inner">
-				
-				<div class="container content countdown">					
+
+				<div class="container content countdown">
 					<div id="countdowntitle">
 						COUNTDOWN
 					</div>
@@ -107,29 +109,27 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script>
-		$(document).ready(function() {
-  var lines = 200;
-  var textLength = 150;
+		$(document).ready(function () {
+			var lines = 200;
+			var textLength = 150;
 
-  for (i = 0; i < lines - 1; i++) {
-    $(".num").first().clone().insertAfter($(".num").first());
-  }
+			for (i = 0; i < lines - 1; i++) {
+				$(".num").first().clone().insertAfter($(".num").first());
+			}
 
 
-  setInterval(function() {
-    $(".num").each(function() {
-      if ($(this).text().length < textLength) {
-        $(this).text(($(this).text() + Math.round(Math.random())));
-      } else {
-        $(this).text(Math.round(Math.random()) + $(this).text().substring(0, $(this).text().length - 1))
-      }
-    });
-
-  }, 75);
-
-});
+			setInterval(function () {
+				$(".num").each(function () {
+					if ($(this).text().length < textLength) {
+						$(this).text(($(this).text() + Math.round(Math.random())));
+					} else {
+						$(this).text(Math.round(Math.random()) + $(this).text().substring(0, $(this).text().length - 1))
+					}
+				});
+			}, 100);
+		});
 
 	</script>
 </body>
