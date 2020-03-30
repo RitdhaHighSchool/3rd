@@ -47,7 +47,7 @@
 	<!-- //fonts -->
 </head>
 
-<body>
+<body class="countdown">
 	<script type="text/javascript">
 		if (navigator.serviceWorker.controller) {
 			console.log('[PWA Builder] active service worker found, no need to register')
@@ -73,9 +73,13 @@
 
 
 	<div class="outer">
-		<div class="middle">
+		<div class="numcontainer">
+			<div class="num">10010101101010101001010110101010100101011010101010010101101010101001010110101010100101011010101010010101101010101001010110101010101101010101001010110101010101101010101001010110101010</div>
+		</div>
+		<div class="middle">		
 			<div class="inner">
-				<div class="container content countdown">
+				
+				<div class="container content countdown">					
 					<div id="countdowntitle">
 						COUNTDOWN
 					</div>
@@ -85,11 +89,11 @@
 						<ul id="countdown">
 							<!--<li><span class="hours">00</span></li>
 		<li class="seperator">:</li>-->
-							<li><span class="hours">00</span></li>
-							<li class="seperator">:</li>
 							<li><span class="minutes">00</span></li>
 							<li class="seperator">:</li>
 							<li><span class="seconds">00</span></li>
+							<li class="seperator">:</li>
+							<li><span class="milliseconds">00</span></li>
 						</ul>
 						<script type="text/javascript">
 							$('#countdown').countdown({
@@ -103,6 +107,31 @@
 			</div>
 		</div>
 	</div>
+	
+	<script>
+		$(document).ready(function() {
+  var lines = 200;
+  var textLength = 150;
+
+  for (i = 0; i < lines - 1; i++) {
+    $(".num").first().clone().insertAfter($(".num").first());
+  }
+
+
+  setInterval(function() {
+    $(".num").each(function() {
+      if ($(this).text().length < textLength) {
+        $(this).text(($(this).text() + Math.round(Math.random())));
+      } else {
+        $(this).text(Math.round(Math.random()) + $(this).text().substring(0, $(this).text().length - 1))
+      }
+    });
+
+  }, 75);
+
+});
+
+	</script>
 </body>
 
 </html>

@@ -47,9 +47,12 @@ body::before {
 	color: #121025;
 	text-shadow: 2px 2px 15vw #121025;
 }
+body.countdown::before {
+	content: '';
+}
 .nav-links {
 	border-bottom: 10px solid #99999b;
-		-webkit-touch-callout: none;
+	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
 	-khtml-user-select: none; 
 	-moz-user-select: none; 
@@ -70,11 +73,37 @@ body::before {
 }
 
 .nav-links.count {
-	border-bottom: 10px solid #fff;
+	border-bottom: 10px solid #99999b;
 }
 
-.nav-links.count .navbar::before, .nav-links.count .navbar::after {
-	display: none;
+.nav-links.count .navbar::before {
+	position: absolute;
+	content: '';
+	background: url(../images/headleftr.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 0;
+	border: none;
+	display: inline-block;
+	width: 622px;
+	height: 128px;
+	left: 0;
+	top: 0;
+}
+
+.nav-links.count .navbar::after {
+	position: absolute;
+	content: '';
+	right: 0;
+	top: 0;
+	background: url(../images/headrightr.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 0;
+	border: none;
+	display: inline-block;
+	width: 622px;
+	height: 128px;
 }
 
 .navbar::before {
@@ -118,7 +147,7 @@ body::before {
     position: relative;
 	z-index: 99999;
 }
-/*.outer {
+.outer {
 	display: table;
 	position: absolute;
 	top: 0;
@@ -135,9 +164,9 @@ body::before {
   .inner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: calc(6vh + 50px);
+	padding-top: calc(6vh + 10px);
 	width: 100vw;
-  }*/
+  }
 .container.content {
 	margin: 0;
 	padding: 0;
@@ -175,7 +204,7 @@ body::before {
 .nav-links.count .navbar {
 	position: relative;
 	display:block;
-	background: #b55061;
+	background: #974853;
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 0;
@@ -197,7 +226,7 @@ body::before {
 	z-index: 99999;
 	background: #fff;
 	color: #000;
-	mix-blend-mode: screen;
+	mix-blend-mode: normal;
 	margin: 0.2em auto;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
@@ -205,7 +234,9 @@ body::before {
 	-moz-user-select: none; 
 	-ms-user-select: none;
 	user-select: none; 
-	pointer-events: none;	
+	pointer-events: none;
+	animation: countdown1 0.5s step-start infinite;
+	animation-direction: alternate;
 }
 
 #countdowntime {
@@ -227,6 +258,8 @@ body::before {
 	-ms-user-select: none;
 	user-select: none; 
 	pointer-events: none;	
+	animation: countdown2 0.5s step-start infinite;
+	animation-direction: alternate;
 }
 
 ul#countdown {
@@ -240,9 +273,21 @@ ul#countdown {
 ul#countdown li {
 	display: inline;
 	margin: 0 -.3em;
-	color: #852633;
+	color: #b35763;
 	}
-
+.numcontainer {
+	z-index: -1;
+	margin-top: 90px;
+	position: absolute;
+	max-height: calc(100vh - 90px);
+	overflow: hidden;
+}
+.num {
+	opacity: 0.1;
+	font-size: 20px;
+	position: relative;
+	overflow: hidden;
+}
 
 #missiondetail {
 	font-family: 'RD CHULAJARUEK';
@@ -629,13 +674,13 @@ ul#countdown li {
 	.navbar h1 {
 		 font-size: 5.25em;
 	 }
-	 .navbar::before {
+	 .navbar::before, .nav-links.count .navbar::before {
 		width: 311px;
 		height: 64px;
 		left: 0;
 		top: 0;
 	}
-	.navbar::after {
+	.navbar::after, .nav-links.count .navbar::after {
 		width: 311px;
 		height: 64px;
 		top: 64px;
@@ -763,7 +808,7 @@ ul#countdown li {
 	.navbar h1 {
 		 font-size: 3.25em;
 	 }
-	.navbar::after {
+	.navbar::after, .nav-links.count .navbar::after {
 		top: 0;
 	}
 	.navbar h1 {
@@ -818,7 +863,7 @@ ul#countdown li {
 	.sep:nth-child(2) {
 		display: block;
 		margin: 0 auto 1em;
-	}
+	}	
 }
 @media(max-width:568px){
 	#missiontitle {
@@ -1072,10 +1117,46 @@ ul#countdown li {
 	100% {
 		transform: scale(1);
 		}
-    50% {
+  50% {
 		transform: scale(0.9);
 		}
 	100% {
 		transform: scale(1);
+	}
+}
+
+@keyframes countdown1 {
+	100% {
+		background-color: #fff;
+		}
+	50% {
+			background-color: #c1a0a8;
+		}
+  25% {
+		background-color: #b35763;
+		}
+	50% {
+		background-color: #c1a0a8;
+	}
+	100% {
+		background-color: #fff;
+	}
+}
+
+@keyframes countdown2 {
+	100% {
+		border-color: #fff;
+		}
+	50% {
+		border-color: #c1a0a8;
+		}
+  25% {
+		border-color: #b35763;
+		}
+	50% {
+		border-color: #c1a0a8;
+	}
+	100% {
+		border-color: #fff;
 	}
 }
