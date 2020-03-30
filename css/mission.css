@@ -386,8 +386,8 @@ ul#countdown li {
 
 #reward h2::before {
 	content: '';
-	width: 93px;
-	height: 120px;
+	width: 77.5px;
+	height: 100px;
 	background: url(../images/trophy.png);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -406,8 +406,8 @@ ul#countdown li {
 
 #reward h2::after {
 	content: '';
-	width: 93px;
-	height: 120px;
+	width: 77.5px;
+	height: 100px;
 	background: url(../images/trophy.png);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -608,8 +608,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 85px;
-		height: 100px;
+		width: 72px;
+		height: 93px;
 	}
 	#missiondetail {
     font-size: 2.5em;
@@ -701,8 +701,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 76px;
-		height: 90px;
+		width: 60px;
+		height: 78px;
 	}
 	.float-left {
 		width:60%;
@@ -745,8 +745,8 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 76px;
-		height: 90px;
+		width: 60px;
+		height: 78px;
 	}
 }
 @media(max-width:667px){
@@ -790,7 +790,7 @@ ul#countdown li {
 	}
 	#reward h2::before,
 	#reward h2::after {
-		width: 55px;
+		width: 50px;
 		height: 65px;
 	}
 	#missiondetail {
@@ -898,7 +898,7 @@ ul#countdown li {
 	#reward h2::before,
 	#reward h2::after {
 		width: 42px;
-		height: 50px;
+		height: 54.2px;
 	}
 	#accept {
 		font-size: 36px !important;
@@ -1053,13 +1053,13 @@ ul#countdown li {
 
 @keyframes scale2 {
 	100% {
-		transform: scale(0.75);
+		transform: scale(1);
 		}
     50% {
-		transform: scale(0.9);
+		transform: scale(0.75);
 		}
 	100% {
-		transform: scale(0.75);
+		transform: scale(1);
 	}
 }
 
