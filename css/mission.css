@@ -21,7 +21,7 @@ html, body {
 	height: 100vh;
 	overflow-x: hidden;
 	-ms-overflow-style: none;
-	background: transparent;
+	background: #000;
 	scrollbar-width: none
 }
 html::-webkit-scrollbar, body::-webkit-scrollbar {
@@ -46,6 +46,10 @@ body::before {
 	position: fixed;
 	color: #121025;
 	text-shadow: 2px 2px 15vw #121025;
+	z-index: 1;
+}
+body *, body *::before, body *::after {
+	z-index: 2;
 }
 body.countdown::before {
 	content: '';

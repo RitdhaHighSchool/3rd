@@ -106,7 +106,8 @@
 		</div>
 	</div>
 
-	<script src="js/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.1.5/html2canvas.min.js"></script> -->	
 	<script>
 		$(document).ready(function () {
 
@@ -117,7 +118,7 @@
 				if ($('#reward p').is(':empty')) {
 					$('#reward p').text('พิมพ์ที่นี่...')
 				}
-				html2canvas($('#capture'), { scale: 2 }).then(canvas => {
+				html2canvas(document.body, { scale: 2 }).then(canvas => {
 					var a = document.createElement('a');
 					var d = new Date()
 					var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
@@ -125,7 +126,7 @@
 					var nd = new Date(utc + (3600000 * offset));
 					var date = nd.toJSON().slice(0, 10).replace(/-/g, '');
 					a.href = canvas.toDataURL("image/png");
-					a.download = 'mission' + date + '.png';
+					a.download = 'mission' + date + Math.floor($.now() / 1000) + '.png';
 					a.click();
 					$('#missiondetail').text('')
 					$('#reward p').text('')
