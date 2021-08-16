@@ -203,6 +203,7 @@ body.countdown::before {
 
 #missiontitle div {
 	animation: missiontext 1s step-start infinite;
+	position: relative;
 }
 
 .nav-links.count .navbar {
