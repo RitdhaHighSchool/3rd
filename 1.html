@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th-TH">
+
+<head>
+	<title>3ʳᵈ TESTAMENT</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+	<meta name="HandheldFriendly" content="true">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="3rd testament, third testament, โรงเรียนฤทธาวิทยาคม, ฤทธาวิทยาคม, Ritdha High School, The Gifted นักเรียนพลังกิฟต์, นักเรียนพลังกิฟต์, #TheGiftedSeries, The Gifted Students, Ad Astra Sapientiam" />
+	<meta name="description" content="Welcome to 3rd TESTAMENT" />
+	<meta name="author" content="@TheGiftedInts">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@TheGiftedInts" />
+	<meta name="twitter:creator" content="@TheGiftedInts" />
+	<meta name="twitter:title" content="3ʳᵈ TESTAMENT" />
+	<meta name="twitter:description" content="Welcome to 3rd TESTAMENT" />
+	<meta name="twitter:image" content="https://3rd.ritdha.com/icon.png" />
+	<meta property="og:url" content="https://3rd.ritdha.com" />
+	<meta property="og:title" content="3ʳᵈ TESTAMENT" />
+	<meta property="og:description" content="Welcome to 3rd TESTAMENT" />
+	<meta property="og:image" content="https://3rd.ritdha.com/icon.png" />
+	<meta property="og:type" content="website" />
+	<!-- //for-mobile-apps -->
+	<link rel="apple-touch-icon" sizes="180x180" href="3rd.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="3rd-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="3rd-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="3rd-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<link rel="mask-icon" href="3rd.svg" color="#000084">
+	<meta name="msapplication-TileColor" content="#000084">
+	<meta name="theme-color" content="#000084">
+	<meta name="msapplication-navbutton-color" content="#000084">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/mission.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- font-awesome icons -->
+	<link href="css/fonts.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="capture">
+	<script type="text/javascript">
+		if (navigator.serviceWorker.controller) {
+			console.log('[PWA Builder] active service worker found, no need to register')
+		} else {
+
+			//Register the ServiceWorker
+			navigator.serviceWorker.register('service-worker.js', {
+				scope: './'
+			}).then(function (reg) {
+				console.log('Service worker has been registered for scope:' + reg.scope);
+			});
+		}
+	</script>
+	<div class="nav-links">
+		<nav class="navbar">
+			<div class="container">
+				<h1>3<sup style="top: -.4em; padding-right: .45em;">rd</sup>TESTAMENT</h1>
+			</div>
+		</nav>
+	</div>
+	<div class="navsep"></div>
+	<div>
+		<div class="container content">
+			<div id="missiontitle">
+				<div>
+					MISSION
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div id="missiondetail" contenteditable="true" value="พิมพ์ที่นี่..." placeholder="พิมพ์ที่นี่..."></div>
+			<script type="text/javascript">
+				window.onload = function () {
+					document.getElementById("missiondetail").focus();
+				};
+			</script>
+			<div class="clearfix"></div>
+
+			<div class="sep"></div>
+			<div class="clearfix"></div>
+
+			<div id="bottom">
+				<div class="float-left">
+					<div id="reward" class="float-left">
+						<h2><span>REWARD</span></h2>
+						<p contenteditable="true" placeholder="พิมพ์ที่นี่..."></p>
+					</div>
+				</div>
+				<div class="sep"></div>
+				<div class="float-right">
+					<div id="acceptbutton">
+						<div id="accept">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.1.5/html2canvas.min.js"></script>	
+	<script>
+		$(document).ready(function () {
+
+			$('#acceptbutton').on('click', function () {
+				if ($('#missiondetail').is(':empty')) {
+					$('#missiondetail').text('พิมพ์ที่นี่...')
+				}
+				if ($('#reward p').is(':empty')) {
+					$('#reward p').text('พิมพ์ที่นี่...')
+				}
+				html2canvas(document.body, { scale: 2 }).then(canvas => {
+					var a = document.createElement('a');
+					var d = new Date()
+					var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+					var offset = d.getTimezoneOffset() / -60;
+					var nd = new Date(utc + (3600000 * offset));
+					var date = nd.toJSON().slice(0, 10).replace(/-/g, '');
+					a.href = canvas.toDataURL("image/png");
+					a.download = 'mission' + date + Math.floor($.now() / 1000) + '.png';
+					a.click();
+					$('#missiondetail').text('')
+					$('#reward p').text('')
+				});
+				$(this).addClass('click');
+				$(this).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (event) {
+					$(this).removeClass('click')
+				});
+			});
+
+		});
+
+	</script>
+	<script>
+		document.addEventListener('touchmove', function (event) {
+			event = event.originalEvent || event;
+			if (event.scale !== 1) {
+				event.preventDefault();
+				document.body.style.transform = 'scale(1)';
+			}
+		}, { passive: false });
+
+		var lastTouchEnd = 0;
+		document.documentElement.addEventListener('touchend', function (event) {
+			var now = (new Date()).getTime();
+			if (now - lastTouchEnd <= 300) {
+				event.preventDefault();
+			}
+			lastTouchEnd = now;
+		}, { passive: false });
+	</script>
+
+</body>
+
+</html>
